@@ -2,6 +2,7 @@ import { IcLeatherLogo } from "../../assets";
 import { BaseWalletAdapter } from "./types";
 
 export class LeatherWalletAdapter extends BaseWalletAdapter {
+  appUrl = "https://leather.io/";
   name = "Leather Wallet";
   icon = IcLeatherLogo.default;
 

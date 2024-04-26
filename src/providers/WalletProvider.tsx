@@ -32,7 +32,7 @@ export default function WalletConnectProvider({
     adapters,
     autoConnect!
   );
-  console.log(address);
+
   return (
     <WalletConnectContext.Provider
       value={{ adapters, adapter, connect, disconnect, address }}

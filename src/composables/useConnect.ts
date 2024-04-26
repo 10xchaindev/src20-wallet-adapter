@@ -14,9 +14,11 @@ export default function useConnect(
     window.localStorage.setItem(LOCAL_PREVIOUS_CONNECT_WALLET_KEY, name);
 
   const connect = (adapter: BaseWalletAdapter) => {
-    adapter.connect();
-    setLocalWalletName(adapter.name);
-    setAdapter(adapter);
+    if (adapter.isSupported) {
+      adapter.connect();
+      setLocalWalletName(adapter.name);
+      setAdapter(adapter);
+    } else window.open(adapter.appUrl);
   };
 
   const disconnect = () => {

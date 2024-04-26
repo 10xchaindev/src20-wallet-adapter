@@ -2,6 +2,7 @@ import { IcUnisatLogo } from "../../assets";
 import { BaseWalletAdapter } from "./types";
 
 export class UnisatWalletAdapter extends BaseWalletAdapter {
+  appUrl = "https://unisat.io/"; 
   name = "Unisat";
   icon = IcUnisatLogo.default;
 
