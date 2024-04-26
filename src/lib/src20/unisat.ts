@@ -15,7 +15,7 @@ export class UnisatWalletAdapter extends BaseWalletAdapter {
   }
 
   get isSupported() {
-    return typeof window.unisat === "undefined";
+    return typeof window.unisat !== "undefined";
   }
 
   async connect() {
